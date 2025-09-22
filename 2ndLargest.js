@@ -1,7 +1,7 @@
-let arr = [1, 2, 3, 4, 5, 5, 8];
+let arr = [1, 1, 1, 1, 1];
 
-let maxi1 = -1;
-let maxi2 = -1;
+let maxi1 = -Infinity;
+let maxi2 = -Infinity;
 
 for (let i = 0; i < arr.length; i++) {
   if (arr[i] > maxi1) {
@@ -15,5 +15,10 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 
-console.log(maxi1);
-console.log(maxi2);
+if (maxi2 === -Infinity) {
+  console.log(maxi1);
+  console.log("No distinct 2nd largest number");
+} else {
+  console.log(maxi1);
+  console.log(maxi2);
+}
